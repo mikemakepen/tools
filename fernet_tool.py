@@ -45,7 +45,7 @@ def encrypt(data: str, salt: str):
     f = FernetTool(password, salt)
     try:
         encrypted = f.encrypt(data)
-        print(f'encrypted: {encrypted.decode()}')
+        print(encrypted.decode())
     except:
         print('encrypt fail')
 
@@ -58,7 +58,7 @@ def decrypt(data: str, salt: str):
     f = FernetTool(password, salt)
     try:
         decrypted = f.decrypt(data)
-        print(f'decrypted: {decrypted.decode()}')
+        print(decrypted.decode())
     except:
         print('decrypt fail')
 
